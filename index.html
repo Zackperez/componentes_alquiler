@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estilos.css">
+    <title>Prueba img por link</title>
+</head>
+
+<body>
+    <br><br>
+
+    <main>
+
+        <div class="pagina-principal">
+
+        </div>
+        <br> <br>
+
+        <div class="contenedor-alquileres">
+            <div class="contenido">
+
+                <!-- Modal -->
+                <div id="targetModalInformacion" class="modal">
+                    <!-- Modal content -->
+                    <div class="modal-contenido">
+                        <div class="modal-cabecera">
+                            <span class="btn-cerrar-modal cerrar-modal-informacion">&times;</span>
+                        </div>
+
+                        <div class="modal-cuerpo">
+
+                            <div class="modal-cuerpo-imagen">
+                                <img src="https://i.postimg.cc/MXkPP2nx/casa1.jpg" alt="">
+                            </div>
+
+                            <div class="modal-detalles">
+
+                                <div class="detalles">
+                                    <p class="descripcion"><i class="fa-solid fa-bed"></i> Habitaciones: 3</p>
+                                </div>
+                                <div class="detalles">
+                                    <p class="descripcion"><i class="fa-solid fa-toilet"></i> Baños: 3</p>
+                                </div>
+                                <div class="detalles">
+                                    <p class="descripcion"><i class="fa-solid fa-kitchen-set"></i> Cocina: Si</p>
+                                </div>
+
+
+                            </div>
+
+                            <div class="modal-cuerpo-contenido">
+                                <div class="modal-titulo">
+                                    <h2 class="modal__titulo">Casa en Villacampestre</h2>
+                                </div>
+
+                                </ul>
+                                <div class="descripcion-casa">
+                                    <p>Descripcion:</p>
+                                    <p class="descripcion-casa__texto">Lorem, ipsum dolor sit amet consectetur
+                                        adipisicing elit. Non aliquid ratione
+                                        obcaecati, ad eos vero facilis provident amet, assumenda asperiores aspernatur a
+                                        laboriosam corporis ducimus iste laudantium mollitia reiciendis molestiae.</p>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="modal-pie">
+                            <button id="btnEliminarDatosModal">Contactar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="casa">
+                    <div class="casa-imagen">
+                        <div class="top-right">Disponible</div>
+                        <img src="https://i.postimg.cc/MXkPP2nx/casa1.jpg" alt="">
+                    </div>
+                    <div class="casa-contenido">
+                        <div class="casa-titulo">
+                            <p class="casa__titulo">Casa en Villacampestre</p>
+                        </div>
+                        <div class="casa-info">
+                            <p>5 Huespedes</p>
+                            <p>º</p>
+                            <p>3 Hab.</p>
+                            <p>º</p>
+                            <p>3 Baños</p>
+                        </div>
+
+                        <div class="casa-boton-info">
+                            <button id="btnAbrirModal" class="boton-1">Mas información</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="casa">
+                    <div class="casa-imagen">
+                        <div class="top-right">Disponible</div>
+                        <img src="https://i.postimg.cc/mZcT5YP6/casa2.jpg" alt="">
+                    </div>
+                    <div class="casa-contenido">
+                        <div class="casa-titulo">
+                            <p class="casa__titulo">Casa en Villacampestre</p>
+                        </div>
+                        <div class="casa-info">
+                            <p>5 Huespedes</p>
+                            <p>º</p>
+                            <p>3 Hab.</p>
+                            <p>º</p>
+                            <p>3 Baños</p>
+                        </div>
+
+                        <div class="casa-boton-info">
+                            <button id="btnAbrirModalModificar" class="boton-1">Mas información</button>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <br> <br>
+
+        <div class="agregar-contenido">
+            <p>Nombre del alquiler</p>
+            <input type="text" id="nombreAlquiler"> 
+            <p>Numero de huespedes</p>
+            <input type="text" id="huespedesAlquiler"> 
+            <p>Baños</p>
+            <input type="text" id="bañosAlquiler"> 
+            <p>Cocina</p>
+            <input type="text" id="cocinaAlquiler"> 
+            <p>Descripcion</p>
+            <input type="text" id="descripcionAlquiler">
+            <p>img url</p>
+            <input type="text" id="imagenAlquiler">
+            <button id="btnAgregarInformacion" class="boton-1">Agregar contenido</button>
+
+        </div>
+
+        <br> <br>
+
+
+        <div class="lista-alquileres" id="listaAlquileres">
+
+        </div>
+        <br> <br>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-logo">
+                <h2>Inmobilaria</h2>
+                <p>Algún lema de la Inmobilaria</p>
+                <a href="#" class="fa fa-facebook"></a>
+                <a href="#" class="fa icons fa-twitter"></a>
+                <a href="#" class="fa fa-instagram"></a>
+            </div>
+            <div class="footer-links">
+                <div class="platform">
+                    <h3>Correo electrónico</h3>
+                    <ul>
+                        <a href="#">
+                            <li>inmobilaria@gmail.com</li>
+                        </a>
+                    </ul>
+                </div>
+                <div class="learning">
+                    <h3>Dirección</h3>
+                    <ul>
+                        <a href="https://goo.gl/maps/6Tk4oqR8XtvND9P6A" target="_blank">
+                            <li>Cll 58 #55-66</li>
+                        </a>
+                    </ul>
+                </div>
+                <div class="About">
+                    <h3>Celular</h3>
+                    <ul>
+                        <a href="#">
+                            <li>300-500-60-89</li>
+                        </a>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-contactus">
+                <h2>Contáctanos</h2>
+                <button>Enviar mensaje</button>
+            </div>
+        </div>
+        <div class="copywright-tag">&copyCopyright My Academy. All rights reserved</div>
+    </footer>
+
+    <script src="js/index.js" type="module"> </script>
+    <script src="https://kit.fontawesome.com/1a5bcd4a97.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+</body>
+
+</html>

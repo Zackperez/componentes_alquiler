@@ -1,0 +1,395 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f2f2f2;
+}
+
+/* #191919 */
+button {
+    width: 10vw;
+    height: 5vh;
+    cursor: pointer;
+    border: 1px solid transparent;
+    background-color: aquamarine;
+    font-size: 2.3vh;
+    font-weight: 500;
+    border-radius: 0.3vw;
+}
+
+ul {
+    list-style: none;
+}
+
+.pagina-principal{
+    background-image: url('https://i.postimg.cc/zD9qZyWD/casa4.jpg');
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: center;
+    background-attachment: fixed;
+    height: 50vh;
+}
+
+.contenedor-alquileres {
+    display: grid;
+
+}
+
+.contenedor-alquileres .contenido {
+    display: flex;
+    column-gap: 5vw;
+    row-gap: 2vw;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.contenido .casa .casa-imagen img {
+    max-height: 50vh;
+    max-width: 80vw;
+    width: 30vw;
+    height: 40vh;
+}
+
+.casa-imagen {
+    position: relative;
+}
+
+.top-right {
+    background-color: greenyellow;
+    position: absolute;
+    top: 8px;
+    width: 7vw;
+    border-radius: 0.5vw;
+    right: 0.5vw;
+}
+
+.casa-informacion {
+    display: flex;
+    column-gap: 1vw;
+}
+
+.contenido .casa {
+    display: grid;
+    grid-template-areas:
+        "imagen"
+        "informacion";
+    grid-template-rows: 1fr 1fr;
+    justify-items: center;
+    border-radius: 0.5vw;
+    text-align: center;
+    background-color: #fff;
+    height: 70vh;
+    box-shadow: 0px 0px 30px rgba(221, 221, 211, 0.3);
+}
+
+.casa .casa-imagen {
+    grid-area: imagen;
+}
+
+.casa .casa-contenido {
+    grid-area: informacion;
+}
+
+.casa .casa-contenido {
+    display: grid;
+    column-gap: 2vw;
+    justify-items: center;
+    padding: 0.5vw 1vw 1vw;
+}
+
+.casa-contenido .casa-info {
+    display: flex;
+    flex-direction: row;
+    column-gap: 1.2vw;
+    font-size: 1vw;
+}
+
+.casa-titulo .casa__titulo {
+    font-size: 1.7vw;
+    font-weight: 600;
+}
+
+.casa-boton-info a {
+    text-decoration: none;
+    color: black;
+    background-color: aquamarine;
+    padding: 0.5vw;
+    border-radius: 0.3vw;
+    font-size: 1.1vw;
+}
+
+/* Modal */
+.modal {
+    display: none;
+    /* POr defecto no se muestran en pantalla hasta que se abran */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+
+.modal .modal-contenido {
+    display: grid;
+    height: 75vh;
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 20px;
+    width: 80vw;
+    border-radius: 0.4vw;
+    grid-template-areas:
+        "cabecera"
+        "cuerpo"
+        "pie";
+    grid-template-rows: 5vh auto 5vh;
+}
+
+.modal .modal-cabecera {
+    grid-area: cabecera;
+}
+
+.modal .modal-cuerpo {
+    grid-area: cuerpo;
+    display: grid;
+    grid-template-areas:
+        "imagen contenido"
+        "detalles detalles";
+    align-items: center;
+    grid-template-columns: 1fr 1fr;
+    justify-content: start;
+}
+
+.modal-cuerpo .modal-detalles {
+    grid-area: detalles;
+    display: grid;
+}
+
+.modal-cuerpo .modal-detalles {
+    display: flex;
+    flex-direction: row;
+    column-gap: 2vw;
+    font-size: 1vw;
+    margin-left: 4.5vw;
+}
+
+.modal-cuerpo .modal-detalles .detalles {
+    padding: 0 1vw;
+}
+
+.modal-cuerpo .modal-cuerpo-imagen {
+    grid-area: imagen;
+    display: flex;
+    justify-content: center;
+}
+
+.modal-cuerpo .modal-cuerpo-imagen img {
+    height: 45vh;
+    width: auto;
+}
+
+.modal-cuerpo .modal-cuerpo-contenido {
+    grid-area: contenido;
+    display: grid;
+    justify-content: start;
+}
+
+.modal-cuerpo .modal-cuerpo-contenido .descripcion-casa .descripcion-casa__texto{
+    font-size: 1vw;
+}
+
+.modal-pie {
+    grid-area: pie;
+    display: grid;
+    justify-content: end;
+}
+
+
+.modal__titulo {
+    font-size: 5vh;
+}
+
+.modal__descripcion {
+    color: #4e4e4e;
+    font-size: 1.2vw;
+}
+
+/* The Close Button */
+.btn-cerrar-modal {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.btn-cerrar-modal:hover,
+.btn-cerrar-modal:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.lista-alquileres {
+    display: grid;
+    justify-content: center;
+    row-gap: 5vh;
+}
+
+.lista-alquileres .casa {
+    display: grid;
+    grid-template-areas:
+        "imagen informacion";
+    grid-template-rows: auto;
+    justify-items: center;
+    justify-content: space-between;
+    border-radius: 0.5vw;
+    text-align: center;
+    background-color: #fff;
+    height: 30vh;
+    width: 70vw;
+    box-shadow: 0px 0px 30px rgba(221, 221, 211, 0.3);
+}
+
+.lista-alquileres .casa .casa-imagen .casa__imagen {
+    height: 30vh;
+    width: 20vw;
+}
+
+.lista-alquileres .casa .casa-contenido {
+    display: grid;
+    grid-template-areas:
+        "titulo info boton";
+    align-items: center;
+}
+
+.lista-alquileres .casa .casa-titulo {
+    grid-area: titulo;
+}
+
+.lista-alquileres .casa .casa-info {
+    grid-area: info;
+}
+
+.lista-alquileres .casa .casa-boton {
+    grid-area: boton;
+}
+
+*{margin: 0;padding: 0;box-sizing: border-box;}
+
+:root{
+	--black: #000000;
+	--light-red: #dd4545;
+}
+.footer-container{
+	background-color: #edebed8c;
+	display: flex;
+	justify-content: space-around;
+	padding: 2vw 3vw;
+}
+
+/*footer left side start*/
+.footer-logo{
+	/*background-color: yellowgreen;*/
+	width: 18vw;
+	margin-left: 7rem;
+}
+.footer-logo h2{
+	font-size: 2vw;
+}
+.footer-logo p{
+	font-size: 1vw;
+	color: #6e6b6b;
+	padding: 1.5rem 0rem;
+	line-height: 2.1rem;
+}
+.footer-logo a{
+	text-decoration: none;
+}
+.fa{
+	background-color: var(--black);
+	color: #ffffff;
+	padding: .6rem;
+	border-radius: .3rem;
+}
+.icons{
+	margin: 0rem 1.5rem;
+}
+/*footer left side ends*/
+/*footer center starts*/
+.footer-links{
+	width: 32vw;
+	display: flex;
+	justify-content: space-between;
+	font-size: 1vw;
+}
+.footer-links ul a li{
+	list-style-type: none;
+	padding: 1rem 0rem;
+}
+.footer-links ul a{
+	text-decoration: none;
+	color: #6e6b6b;
+}	
+/*footer center ends*/
+
+/*footer right section*/
+.footer-contactus{
+	width: 17vw;
+}
+.footer-contactus h2{
+	font-size: 2vw;
+}
+.footer-contactus button{
+    font-size: 1vw;
+    background: greenyellow;
+    border: none;
+    border-radius: .4rem;
+    color: black;
+    margin-top: 1.6rem;
+    cursor: pointer;
+}
+.copywright-tag{
+	background-color: lightgray;
+	padding: 1.5rem;
+	font-size: 1vw;
+	text-align: center;
+}
+
+
+/*=========================responsive design============================*/
+@media(max-width: 986px){
+	html{
+		font-size: 55%;
+	}
+}
+@media(max-width: 800px){
+	.footer-container{
+		flex-direction: column;
+		align-items: center;
+	}
+	.footer-logo{
+		width: 32vw;
+		margin-bottom: 3rem;
+		margin-left: 0rem;
+	}
+	.footer-links{
+		flex-direction: column;
+		text-align: center;
+	}
+	.footer-links h3{
+		font-size: 2.4rem;
+		margin: 1rem 0px;
+	}
+	.footer-contactus{
+		width: 21vw;
+		margin-top: 2.4rem;
+		text-align: center;
+	}
+	.footer-contactus h2{
+		font-size: 2.5rem;
+	}
+}

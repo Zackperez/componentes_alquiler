@@ -1,0 +1,47 @@
+const Vista = {
+
+    getDatosContenidoAgregar: function () {
+        const nombreAlquiler = document.getElementById('nombreAlquiler').value;
+        const huespedesAlquiler = document.getElementById('huespedesAlquiler').value;
+        const bañosAlquiler = document.getElementById('bañosAlquiler').value;
+        const cocinaAlquiler = document.getElementById('cocinaAlquiler').value;
+        const descripcionAlquiler = document.getElementById('descripcionAlquiler').value;
+        const imagenAlquiler = document.getElementById('imagenAlquiler').value;
+
+
+        return { nombreAlquiler, huespedesAlquiler, bañosAlquiler, cocinaAlquiler, descripcionAlquiler, imagenAlquiler };
+    }
+}
+
+const Controlador = {
+
+    /* Agregar contenido */
+    async mostrarContenidoAgregar() {
+        const { nombreAlquiler, huespedesAlquiler, bañosAlquiler, cocinaAlquiler, descripcionAlquiler, imagenAlquiler } = Vista.getDatosContenidoAgregar();
+        try {
+            const res = await Modelo.insertarDatosContenido(nombreAlquiler, huespedesAlquiler, bañosAlquiler, cocinaAlquiler, descripcionAlquiler, imagenAlquiler);
+
+        } catch (err) {
+            Vista.mostrarMensajeError(err);
+        }
+    },
+
+}
+
+const Modelo = {
+
+    async insertarDatosContenido(nombreAlquiler, huespedesAlquiler, bañosAlquiler, cocinaAlquiler, descripcionAlquiler, imagenAlquiler) {
+        const datos_insertar = {
+            nombre_alquiler: nombreAlquiler,
+            huespedes_alquiler: huespedesAlquiler,
+            baños_alquiler: bañosAlquiler,
+            cocina_alquiler: + cocinaAlquiler,
+            descripcion_alquiler: + descripcionAlquiler,
+            imagen_alquiler: + imagenAlquiler
+        }
+
+        console.log(datos_insertar)
+
+        return datos_insertar;
+    },
+}
